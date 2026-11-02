@@ -554,6 +554,7 @@ LOGIN_HTML = """
   .logo { width: 160px; height: 160px; margin-bottom: 28px; }
   .card { text-align: left; }
   .card h1 { margin: 0 0 4px; font-size: 32px; }
+  .card .version { display: block; margin: 0 0 8px; font-size: 12px; opacity: .55; }
   .card p.sub { margin: 0 0 24px; font-size: 14px; color: var(--primary); opacity: .75; }
   .card button { width: 100%; padding: 13px; font-size: 15px; }
   .error {
@@ -568,6 +569,7 @@ LOGIN_HTML = """
     <form class="card" method="post">
       <input type="hidden" name="_csrf" value="{{ csrf_token() }}">
       <h1>Админ самбар</h1>
+      <small class="version">v0.2</small>
       <p class="sub">Үргэлжлүүлэхийн тулд нэвтэрнэ үү.</p>
       {% if error %}<div class="error">{{ error }}</div>{% endif %}
       <label for="email">И-мэйл хаяг</label>
